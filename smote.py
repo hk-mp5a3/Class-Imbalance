@@ -5,14 +5,19 @@
 from sklearn.neighbors import NearestNeighbors
 import random
 
+
 class Smote:
     def __init__(self, sample, N, k):
+        # sample: minority class samples. 2D array
+        # N: amount of SMOTE N%
+        # k: number of nearest neighbors k
+
         self.sample = sample
         self.k = k
         self.T = len(self.sample)
         self.N = N
-        self.newIndex = 0
-        self.synthetic = []
+        self.newIndex = 0  # keep a count of number of synthetic samples
+        self.synthetic = []  # array for synthetic samples
         self.neighbors = NearestNeighbors(n_neighbors=self.k).fit(self.sample)
 
     def over_sampling(self):
