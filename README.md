@@ -40,7 +40,8 @@ The output will be:
 
 ### Visualization
 For example, suppose the blue triangles are majority class data, the green triangles are minority class data. 
-With synthetic minority over-sampling, 
+With synthetic minority over-sampling, the red dots are the synthetic samples we generated.
+
 ![](https://github.com/zhu-y/Imbalanced-data/blob/master/image/smote_example.png)
 
 
