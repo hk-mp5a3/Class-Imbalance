@@ -2,9 +2,11 @@
 Dealing with class imbalance problem in machine learning. Over-sampling, under-sampling, Synthetic.
 
 ## Requirements
+```
 sklearn
 numpy
 random
+```
 
 ## Smote
 Smote is a synthetic minority over-sampling technique mentioned in N. V. Chawla, K. W. Bowyer, L. O. Hall and W. P. Kegelmeyer's paper [SMOTE: Synthetic Minority Over-sampling Technique][1]
