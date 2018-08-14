@@ -7,8 +7,8 @@ sklearn
 numpy
 ```
 
-## Smote
-Smote is a synthetic minority over-sampling technique mentioned in N. V. Chawla, K. W. Bowyer, L. O. Hall and W. P. Kegelmeyer's paper [SMOTE: Synthetic Minority Over-sampling Technique][1]
+## SMOTE
+SMOTE is a synthetic minority over-sampling technique mentioned in N. V. Chawla, K. W. Bowyer, L. O. Hall and W. P. Kegelmeyer's paper [SMOTE: Synthetic Minority Over-sampling Technique][1]
 
 The corresponding code is in smote.py. 
 
