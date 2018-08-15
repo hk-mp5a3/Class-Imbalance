@@ -21,22 +21,26 @@ SMOTE is a synthetic minority over-sampling technique mentioned in N. V. Chawla,
 ```
 Parameters
 ----------
-sample:     2D (numpy)array
+sample      2D (numpy)array
             minority class samples
-N:          Integer
+            
+N           Integer
             amount of SMOTE N%
-k:          Integer
+            
+k           Integer
             number of nearest neighbors k
             k <= number of minority class samples
+            
 Attributes
 ----------
 newIndex    Integer
             keep a count of number of synthetic samples
             initialize as 0
+            
 synthetic   2D array
             array for synthetic samples
+            
 neighbors   K-Nearest Neighbors model
-
 ```
 
 The corresponding code is in [smote.py][2]. 
