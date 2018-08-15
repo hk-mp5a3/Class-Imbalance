@@ -12,13 +12,13 @@ class Smote:
 
     Parameters
     -----------
-    sample:     2D (numpy)array
+    sample      2D (numpy)array
                 minority class samples
 
-    N:          Integer
+    N           Integer
                 amount of SMOTE N%
 
-    k:          Integer
+    k           Integer
                 number of nearest neighbors k
                 k <= number of minority class samples
 
