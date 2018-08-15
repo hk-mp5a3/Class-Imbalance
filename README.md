@@ -10,24 +10,37 @@ numpy
 ## SMOTE
 SMOTE is a synthetic minority over-sampling technique mentioned in N. V. Chawla, K. W. Bowyer, L. O. Hall and W. P. Kegelmeyer's paper [SMOTE: Synthetic Minority Over-sampling Technique][1]
 
-The corresponding code is in smote.py. 
+```
+Parameters
+----------
+sample:     2D (numpy)array
+            minority class samples
+N:          Integer
+            amount of SMOTE N%
+k:          Integer
+            number of nearest neighbors k
+            k <= number of minority class samples
+Attributes
+----------
+newIndex    Integer
+            keep a count of number of synthetic samples
+            initialize as 0
+synthetic   2D array
+            array for synthetic samples
+neighbors   K-Nearest Neighbors model
+
+```
+
+The corresponding code is in [smote.py][2]. 
 
 ### Example
-Here is an example:
 ```
 from smote import Smote
 import numpy as np
 
 X = np.array([[1, 0.7], [0.95, 0.76], [0.98, 0.85], [0.95, 0.78], [1.12, 0.81]])
-
-# sample: minority class samples. 2D (numpy)array
-# N: amount of SMOTE N%
-# k: number of nearest neighbors k
 s = Smote(sample=X, N=300, k=3)
-
 s.over_sampling()
-
-# synthetic is an array for synthetic samples. 2D
 print(s.synthetic)
 
 ```
@@ -38,10 +51,11 @@ The output will be:
 ```
 
 ### Visualization
-For example, suppose the blue triangles are majority class data, the green triangles are minority class data. 
+Suppose the blue triangles are majority class data, the green triangles are minority class data. 
 With synthetic minority over-sampling, the red dots are the synthetic samples we generated.
 
-![](https://github.com/zhu-y/Imbalanced-data/blob/master/image/smote_example.png)
+![](https://github.com/zhu-y/Imbalanced-data/blob/master/image/smote_example_1.png)
 
 
 [1]: https://arxiv.org/pdf/1106.1813.pdf
+[2]: https://github.com/zhu-y/Imbalance-Data/blob/master/smote.py
