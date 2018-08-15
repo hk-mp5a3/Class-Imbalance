@@ -7,17 +7,40 @@ import random
 
 
 class Smote:
-    def __init__(self, sample, N, k):
-        # sample: minority class samples. 2D array
-        # N: amount of SMOTE N%
-        # k: number of nearest neighbors k
+    """
+    Implement SMOTE, synthetic minority oversampling technique.
 
+    Parameters
+    -----------
+    sample:     2D (numpy)array
+                minority class samples
+
+    N:          Integer
+                amount of SMOTE N%
+
+    k:          Integer
+                number of nearest neighbors k
+                k <= number of minority class samples
+
+    Attributes
+    ----------
+    newIndex    Integer
+                keep a count of number of synthetic samples
+                initialize as 0
+
+    synthetic   2D array
+                array for synthetic samples
+
+    neighbors   K-Nearest Neighbors model
+
+    """
+    def __init__(self, sample, N, k):
         self.sample = sample
         self.k = k
         self.T = len(self.sample)
         self.N = N
-        self.newIndex = 0  # keep a count of number of synthetic samples
-        self.synthetic = []  # array for synthetic samples
+        self.newIndex = 0
+        self.synthetic = []
         self.neighbors = NearestNeighbors(n_neighbors=self.k).fit(self.sample)
 
     def over_sampling(self):
