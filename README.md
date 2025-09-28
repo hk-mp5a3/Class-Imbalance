@@ -1,8 +1,8 @@
 # Imbalance Data Problem
 
-In machine learning, we often encounter unbalanced data. For example, in a bank's credit data, 97% of customers can pay their loans on time, while only 3% cannot. If we ignore 3% of customers who cannot pay on time, the accuracy of the model may still be high, but it may bring huge losses to the bank. Therefore, we need appropriate methods to balance the data.
+In the field of machine learning, imbalanced datasets are a common challenge. For example, in credit risk modeling, approximately 97% of customers may repay their loans on time, whereas only 3% default. A model that disregards this minority class can still yield high overall accuracy; however, such an approach may overlook critical cases, resulting in substantial financial losses for the institution.
 
-Many research papers provide many techniques including over-sampling and under-sampling, to deal with data imbalance. This repository implements some of those techniques. 
+To mitigate this issue, the literature has proposed a variety of resampling strategies, including over-sampling and under-sampling, to improve class balance and enhance model performance. This repository provides implementations of several such techniques.
 
 - [Requirements](https://github.com/zhu-y/Imbalance-Data#requirements)
 - [Over-sampling: SMOTE](https://github.com/zhu-y/Imbalance-Data#smote)
